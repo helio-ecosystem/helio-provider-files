@@ -56,6 +56,8 @@ public class FileWatcherProvider implements AsyncDataProvider {//, Consumer<Emit
 					System.out.println("Key has been unregisterede");
 				}
 			}
+		}catch(Exception e) {
+			emitter.onError(e);
 		}
 	}
 
